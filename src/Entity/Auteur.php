@@ -32,7 +32,7 @@ class Auteur
      * @ORM\ManyToOne(targetEntity="App\Entity\Nationalite", inversedBy="auteurs")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $relation;
+    private $nationalite;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Livre", mappedBy="auteur")
@@ -73,14 +73,14 @@ class Auteur
         return $this;
     }
 
-    public function getRelation(): ?Nationalite
+    public function getNationalite(): ?Nationalite
     {
-        return $this->relation;
+        return $this->nationalite;
     }
 
-    public function setRelation(?Nationalite $relation): self
+    public function setNationalite(?Nationalite $nationalite): self
     {
-        $this->relation = $relation;
+        $this->nationalite = $nationalite;
 
         return $this;
     }

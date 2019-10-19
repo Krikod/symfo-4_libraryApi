@@ -24,7 +24,7 @@ class Nationalite
     private $libelle;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Auteur", mappedBy="relation")
+     * @ORM\OneToMany(targetEntity="App\Entity\Auteur", mappedBy="nationalite")
      */
     private $auteurs;
 
@@ -62,7 +62,7 @@ class Nationalite
     {
         if (!$this->auteurs->contains($auteur)) {
             $this->auteurs[] = $auteur;
-            $auteur->setRelation($this);
+            $auteur->setNationalite($this);
         }
 
         return $this;
@@ -73,8 +73,8 @@ class Nationalite
         if ($this->auteurs->contains($auteur)) {
             $this->auteurs->removeElement($auteur);
             // set the owning side to null (unless already changed)
-            if ($auteur->getRelation() === $this) {
-                $auteur->setRelation(null);
+            if ($auteur->getNationalite() === $this) {
+                $auteur->setNationalite(null);
             }
         }
 
