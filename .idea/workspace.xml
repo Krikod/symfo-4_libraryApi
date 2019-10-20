@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6114a0a7-1e11-4f9c-bc76-7a81df48a198" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Auteur.php" afterPath="$PROJECT_DIR$/src/Entity/Auteur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Editeur.php" afterPath="$PROJECT_DIR$/src/Entity/Editeur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Genre.php" afterPath="$PROJECT_DIR$/src/Entity/Genre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Livre.php" afterPath="$PROJECT_DIR$/src/Entity/Livre.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/ApiGenreController.php" afterPath="$PROJECT_DIR$/src/Controller/ApiGenreController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,10 +31,10 @@
       <file leaf-file-name="ApiGenreController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ApiGenreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="422">
+              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
-                <element signature="e#34#69#0#PHP" expanded="true" />
+                <element signature="e#34#55#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/Entity/Auteur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
@@ -332,12 +328,12 @@
       <updated>1571307112330</updated>
       <workItem from="1571307113568" duration="1352000" />
       <workItem from="1571477332424" duration="7666000" />
-      <workItem from="1571595860655" duration="3783000" />
+      <workItem from="1571595860655" duration="4563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12801000" />
+    <option name="totallyTimeSpent" value="13581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="91" y="433" width="1695" height="606" extended-state="0" />
@@ -606,7 +602,7 @@
     <entry file="file://$PROJECT_DIR$/src/Entity/Auteur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
@@ -615,10 +611,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ApiGenreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="422">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
-            <element signature="e#34#69#0#PHP" expanded="true" />
+            <element signature="e#34#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
