@@ -92,4 +92,26 @@ class ApiGenreController extends AbstractController
                 UrlGeneratorInterface::ABSOLUTE_URL
             )], true);
     }
+
+    /**
+     * @Route("/api/genres/{id}", name="api_genres_update", methods={"PUT"})
+     */
+    public function edit(Genre $genre, Request $request,
+                         ObjectManager $manager,
+                         SerializerInterface $serializer)
+    {
+        $data = $request->getContent();
+
+        $resultat = $serializer->deserialize(
+            $data,
+            Genre::class,
+            'json',
+            ['object_to_populate' => $genre]
+        );
+        $manager->persist($genre);
+        $manager->flush();
+//      1er arg. en général null car on n'affiche rien.
+        return new JsonResponse("Genre bien modifié",
+            Response::HTTP_OK, [], true);
+    }
 }
