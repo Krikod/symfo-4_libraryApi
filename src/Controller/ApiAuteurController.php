@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Auteur;
 use App\Repository\AuteurRepository;
+use App\Repository\NationaliteRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -104,18 +105,21 @@ class ApiAuteurController extends AbstractController
      * @Route("/api/auteurs/{id}", name="api_auteurs_update", methods={"PUT"})
      */
     public function edit(Auteur $auteur, Request $request,
+                         NationaliteRepository $nationaliteRepository,
                          ObjectManager $manager,
                          SerializerInterface $serializer,
                          ValidatorInterface $validator)
     {
         $data = $request->getContent();
 
-        $resultat = $serializer->deserialize(
-            $data,
-            Auteur::class,
-            'json',
-            ['object_to_populate' => $auteur]
-        );
+        // Variable pour contenir le format tableau
+        $dataTab = $serializer->decode($data, 'json');
+        // récup la nationalité de l'objet json
+        $nationalite = $nationaliteRepository->find($dataTab['nationalite']['id']);
+
+        $serializer->deserialize($data,Auteur::class,'json',
+            ['object_to_populate' => $auteur]);
+        $auteur->setNationalite($nationalite); // si pas changée
 
         // Gestion des erreurs de validation
         $errors = $validator->validate($auteur);

@@ -17,6 +17,7 @@ class Nationalite
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      * @Groups({"ListeAuteurFull"})
+     * @Groups({"ListeAuteurSimple"})
      */
     private $id;
 
