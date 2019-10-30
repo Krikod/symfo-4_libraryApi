@@ -14,30 +14,35 @@ class Livre
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"ListeAuteurFull"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"ListeGenreFull"})
+     * @Groups({"ListeAuteurFull"})
      */
     private $isbn;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"ListeGenreFull"})
+     * @Groups({"ListeAuteurFull"})
      */
     private $titre;
 
     /**
      * @ORM\Column(type="float", nullable=true)
      * @Groups({"ListeGenreFull"})
+     * @Groups({"ListeAuteurFull"})
      */
     private $prix;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Genre", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"ListeAuteurFull"})
      */
     private $genre;
 
@@ -45,6 +50,7 @@ class Livre
      * @ORM\ManyToOne(targetEntity="App\Entity\Editeur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
      * @Groups({"ListeGenreFull"})
+     * @Groups({"ListeAuteurFull"})
      */
     private $editeur;
 
@@ -58,12 +64,14 @@ class Livre
     /**
      * @ORM\Column(type="integer", nullable=true)
      * @Groups({"ListeGenreFull"})
+     * @Groups({"ListeAuteurFull"})
      */
-    private $année;
+    private $annee;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"ListeGenreFull"})
+     * @Groups({"ListeAuteurFull"})
      */
     private $langue;
 
@@ -144,14 +152,14 @@ class Livre
         return $this;
     }
 
-    public function getAnnée(): ?int
+    public function getAnnee(): ?int
     {
-        return $this->année;
+        return $this->annee;
     }
 
-    public function setAnnée(?int $année): self
+    public function setAnnee(?int $annee): self
     {
-        $this->année = $année;
+        $this->annee = $annee;
 
         return $this;
     }
