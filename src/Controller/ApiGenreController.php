@@ -114,4 +114,15 @@ class ApiGenreController extends AbstractController
         return new JsonResponse("Genre bien modifié",
             Response::HTTP_OK, [], true);
     }
+
+    /**
+     * @Route("/api/genres/{id}", name="api_genres_delete", methods={"DELETE"})
+     */
+    public function delete(Genre $genre, ObjectManager $manager)
+    {
+        $manager->remove($genre);
+        $manager->flush();
+        return new JsonResponse("Genre bien supprimé",
+            Response::HTTP_OK, []);
+    }
 }
