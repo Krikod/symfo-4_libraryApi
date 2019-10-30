@@ -5,10 +5,16 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\GenreRepository")
+ * @UniqueEntity(
+ *     fields={"libelle"},
+ *     message="Il existe déjà un genre avec le libelle {{ value }}"
+ * )
  */
 class Genre
 {
@@ -23,6 +29,13 @@ class Genre
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"ListeGenreSimple", "ListeGenreFull"})
+     * @Assert\Length(
+     *     min=2,
+     *     max=50,
+     *     minMessage="Le libellé doit contenir au moins {{ limit }} caractères",
+     *     maxMessage="Le libellé doit contenir {{ limit }} caractères maximum"
+     * )
+     * @Assert\NotBlank(message="Message vide !")
      */
     private $libelle;
 
