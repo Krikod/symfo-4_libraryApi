@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6114a0a7-1e11-4f9c-bc76-7a81df48a198" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/ApiAuteurController.php" afterPath="$PROJECT_DIR$/src/Controller/ApiAuteurController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Nationalite.php" afterPath="$PROJECT_DIR$/src/Entity/Nationalite.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,11 +43,11 @@
       <file leaf-file-name="ApiAuteurController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ApiAuteurController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="538">
+              <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
               <folding>
                 <element signature="e#34#56#0#PHP" expanded="true" />
-                <element signature="e#3277#3295#0#PHP" expanded="true" />
+                <element signature="e#3382#3400#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -252,9 +251,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2657" />
-    <option name="y" value="3" />
-    <option name="width" value="1178" />
+    <option name="x" value="536" />
+    <option name="y" value="34" />
+    <option name="width" value="1379" />
     <option name="height" value="920" />
   </component>
   <component name="ProjectView">
@@ -359,18 +358,18 @@
       <workItem from="1571477332424" duration="7666000" />
       <workItem from="1571595860655" duration="5040000" />
       <workItem from="1571661784527" duration="12670000" />
-      <workItem from="1572427255124" duration="14350000" />
+      <workItem from="1572427255124" duration="16533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41078000" />
+    <option name="totallyTimeSpent" value="43261000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2657" y="3" width="1178" height="920" extended-state="0" />
+    <frame x="536" y="34" width="1379" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1890681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08959757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -763,11 +762,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ApiAuteurController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="538">
+          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
           <folding>
             <element signature="e#34#56#0#PHP" expanded="true" />
-            <element signature="e#3277#3295#0#PHP" expanded="true" />
+            <element signature="e#3382#3400#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

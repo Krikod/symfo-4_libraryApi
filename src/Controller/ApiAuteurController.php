@@ -57,19 +57,18 @@ class ApiAuteurController extends AbstractController
      */
     public function create(Request $request,
                            ObjectManager $manager,
+                           NationaliteRepository $nationaliteRepository,
                            SerializerInterface $serializer,
                            ValidatorInterface $validator)
     {
         $data = $request->getContent();
-//        $auteur = new Auteur();
-//        $serializer->deserialize(
-//          $data,
-//          Auteur::class,
-//          'json',
-//          ['object_to_populate' => $auteur]);
+        $dataTab = $serializer->decode($data, 'json');
+        $auteur = new Auteur();
+        $nationalite = $nationaliteRepository->find($dataTab['nationalite']['id']);
+        $serializer->deserialize($data,Auteur::class,'json',
+            ['object_to_populate' => $auteur]);
+        $auteur->setNationalite($nationalite);
 
-//        Solution du dessus, ou bien:
-        $auteur = $serializer->deserialize($data,Auteur::class,'json');
 
         // Gestion des erreurs de validation
         $errors = $validator->validate($auteur);
