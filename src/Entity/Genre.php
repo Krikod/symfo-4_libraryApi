@@ -13,7 +13,21 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\GenreRepository")
- * @ApiResource()
+ * @ApiResource(
+ *     itemOperations={
+ *      "get_simple"={
+ *          "method"="get",
+ *          "path"="/genres/{id}/simple",
+ *          "normalization_context"={"groups"={"ListeGenreSimple"}}
+ *      },
+ *      "get_full"={
+ *          "method"="get",
+ *          "path"="/genres/{id}/full",
+ *          "normalization_context"={"groups"={"ListeGenreFull"}}
+ *      }
+ *     },
+ *     collectionOperations={"get"}
+ * )
  * @UniqueEntity(
  *     fields={"libelle"},
  *     message="Il existe déjà un genre avec le libelle {{ value }}"

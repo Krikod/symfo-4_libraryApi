@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6114a0a7-1e11-4f9c-bc76-7a81df48a198" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Auteur.php" afterPath="$PROJECT_DIR$/src/Entity/Auteur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Editeur.php" afterPath="$PROJECT_DIR$/src/Entity/Editeur.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Genre.php" afterPath="$PROJECT_DIR$/src/Entity/Genre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Livre.php" afterPath="$PROJECT_DIR$/src/Entity/Livre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Nationalite.php" afterPath="$PROJECT_DIR$/src/Entity/Nationalite.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +19,8 @@
       <file leaf-file-name="Genre.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Genre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-704">
-              <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="320">
+              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding>
                 <element signature="e#30#74#0#PHP" expanded="true" />
               </folding>
@@ -368,12 +363,12 @@
       <workItem from="1571477332424" duration="7666000" />
       <workItem from="1571595860655" duration="5040000" />
       <workItem from="1571661784527" duration="12670000" />
-      <workItem from="1572427255124" duration="20173000" />
+      <workItem from="1572427255124" duration="23056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46901000" />
+    <option name="totallyTimeSpent" value="49784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="536" y="41" width="1379" height="920" extended-state="0" />
@@ -813,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Genre.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="320">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding>
             <element signature="e#30#74#0#PHP" expanded="true" />
           </folding>
