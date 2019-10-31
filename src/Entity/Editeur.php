@@ -23,8 +23,6 @@ class Editeur
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $nom;
 

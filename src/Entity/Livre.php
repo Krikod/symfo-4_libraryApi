@@ -8,7 +8,14 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\LivreRepository")
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={
+ *          "order"={
+ *              "titre":"ASC",
+ *              "prix":"DESC"
+ *          }
+ *     }
+ * )
  */
 class Livre
 {
@@ -16,64 +23,49 @@ class Livre
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({"ListeAuteurFull"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $isbn;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $titre;
 
     /**
      * @ORM\Column(type="float", nullable=true)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $prix;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Genre", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"ListeAuteurFull"})
      */
     private $genre;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Editeur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $editeur;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Auteur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"ListeGenreFull"})
      */
     private $auteur;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $annee;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"ListeGenreFull"})
-     * @Groups({"ListeAuteurFull"})
      */
     private $langue;
 
