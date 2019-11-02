@@ -5,6 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
+use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
@@ -38,6 +39,18 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *          "titre"="asc",
  *          "prix",
  *          "auteur.nom"="desc"
+ *     }
+ * )
+ * @ApiFilter(
+ *     PropertyFilter::class,
+ *     arguments= {
+ *          "parameterName":"properties",
+ *          "overrideDefaultProperties": false,
+ *          "whitelist": {
+                "isbn",
+ *              "titre",
+ *              "prix"
+ *          }
  *     }
  * )
  */
