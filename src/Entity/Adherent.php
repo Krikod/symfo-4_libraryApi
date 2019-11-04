@@ -6,12 +6,13 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdherentRepository")
  * @ApiResource()
  */
-class Adherent
+class Adherent implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -184,4 +185,21 @@ class Adherent
 
         return $this;
     }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getUsername() // Comment est identifié l'utilisateur. Ici:
+    {
+        return $this->getMail();
+    }
+
+    public function eraseCredentials() {}
 }
