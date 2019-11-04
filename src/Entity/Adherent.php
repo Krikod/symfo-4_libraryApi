@@ -7,10 +7,15 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdherentRepository")
  * @ApiResource()
+ * @UniqueEntity(
+ *     fields={"mail"},
+ *     message="Il existe déjà un mail {{ value }}, veuillez saisir un autre mail"
+ * )
  */
 class Adherent implements UserInterface
 {
