@@ -7,6 +7,8 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
 use ApiPlatform\Core\Serializer\Filter\PropertyFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
@@ -105,6 +107,16 @@ class Livre
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $langue;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Pret", mappedBy="livre")
+     */
+    private $prets;
+
+    public function __construct()
+    {
+        $this->prets = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -210,5 +222,36 @@ class Livre
     public function __toString()
     {
         return (string) $this->titre;
+    }
+
+    /**
+     * @return Collection|Pret[]
+     */
+    public function getPrets(): Collection
+    {
+        return $this->prets;
+    }
+
+    public function addPret(Pret $pret): self
+    {
+        if (!$this->prets->contains($pret)) {
+            $this->prets[] = $pret;
+            $pret->setLivre($this);
+        }
+
+        return $this;
+    }
+
+    public function removePret(Pret $pret): self
+    {
+        if ($this->prets->contains($pret)) {
+            $this->prets->removeElement($pret);
+            // set the owning side to null (unless already changed)
+            if ($pret->getLivre() === $this) {
+                $pret->setLivre(null);
+            }
+        }
+
+        return $this;
     }
 }
