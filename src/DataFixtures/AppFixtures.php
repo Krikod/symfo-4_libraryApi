@@ -3,6 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Entity\Adherent;
+use App\Entity\Livre;
+use App\Entity\Pret;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -11,6 +13,7 @@ class AppFixtures extends Fixture
 {
     private $manager;
     private $faker;
+    private $repoLivre;
 
     public function __construct()
     {
@@ -20,6 +23,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $this->manager = $manager;
+        $this->repoLivre = $this->manager->getRepository(Livre::class);
         $this->loadAdherent();
         $this->loadPret();
         $manager->flush();
@@ -48,7 +52,7 @@ class AppFixtures extends Fixture
                 ->setMail(strtolower($adherent->getNom()) . "@gmail.com")
                 ->setPassword($adherent->getNom());
 
-            $this->addReference('adherent-'.$i, $adherent);// Meth. de AbstractFixture.php: on s'en servira pour affecter un prêt à un adhérent
+            $this->addReference('adherent'.$i, $adherent);// Meth. de AbstractFixture.php: on s'en servira pour affecter un prêt à un adhérent
             $this->manager->persist($adherent);
         }
         $adherent = new Adherent();
@@ -57,7 +61,7 @@ class AppFixtures extends Fixture
             ->setMail("admin@gmail.com")
             ->setPassword("Kod");
         $this->manager->persist($adherent);
-        
+
         $this->manager->flush();
     }
 
@@ -66,6 +70,24 @@ class AppFixtures extends Fixture
      */
     public function loadPret()
     {
+        for ($i=0;$i<25;$i++ ){ // pour chaque adhérent
+            $max = mt_rand(1,5);
+            for ($j=0;$j<=$max;$j++){ // création des prêts
+                $pret = new Pret();
+                $livre = $this->repoLivre->find(mt_rand(1,49));
+                $pret->setLivre($livre)
+                    ->setAdherent($this->getReference('adherent'.$i))
+                    ->setDatePret($this->faker->dateTimeBetween('-6 months'));
+                $dateRetourPrevue = date('Y-m-d H:m:n', strtotime('15 days', $pret->getDatePret()->getTimestamp()));
+                $dateRetourPrevue = \DateTime::createFromFormat('Y-m-d H:m:n',$dateRetourPrevue);
+                $pret->setDateRetourPrevue($dateRetourPrevue);
 
+                if (mt_rand(1,3) == 1) {
+                    $pret->setDateRetourReelle($this->faker->dateTimeInInterval($pret->getDatePret(), "+30 days"));
+                }
+                $this->manager->persist($pret);
+            }
+        }
+        $this->manager->flush();
     }
 }

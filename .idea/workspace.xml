@@ -19,11 +19,11 @@
       <file leaf-file-name="AppFixtures.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+            <state relative-caret-position="465">
+              <caret line="77" column="31" lean-forward="false" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
               <folding>
                 <element signature="e#36#60#0#PHP" expanded="true" />
-                <element signature="e#672#1108#0#PHP" expanded="false" />
+                <element signature="e#811#1247#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -294,12 +294,12 @@
       <workItem from="1571595860655" duration="5040000" />
       <workItem from="1571661784527" duration="12670000" />
       <workItem from="1572427255124" duration="27737000" />
-      <workItem from="1572629643743" duration="11308000" />
+      <workItem from="1572629643743" duration="15207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65773000" />
+    <option name="totallyTimeSpent" value="69672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="700" y="94" width="1220" height="920" extended-state="0" />
@@ -409,7 +409,7 @@
         <state relative-caret-position="2944">
           <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
+            <element signature="e#34#55#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -459,7 +459,7 @@
         <state relative-caret-position="1064">
           <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
+            <element signature="e#34#55#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -649,7 +649,7 @@
         <state relative-caret-position="2496">
           <caret line="78" column="9" lean-forward="false" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
           <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
+            <element signature="e#34#55#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -771,19 +771,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/AbstractFixture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        <state relative-caret-position="86">
+          <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="465">
+          <caret line="77" column="31" lean-forward="false" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
           <folding>
             <element signature="e#36#60#0#PHP" expanded="true" />
-            <element signature="e#672#1108#0#PHP" expanded="false" />
+            <element signature="e#811#1247#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
