@@ -4,7 +4,11 @@ security:
         App\Entity\Adherent:
             algorithm: bcrypt
     providers:
-        in_memory: { memory: null }
+#        in_memory: { memory: null }
+        in_database:
+            entity:
+                class: App\Entity\Adherent
+                property: mail
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
