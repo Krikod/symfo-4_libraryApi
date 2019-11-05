@@ -59,12 +59,21 @@ class AppFixtures extends Fixture
             $this->addReference('adherent'.$i, $adherent);// Meth. de AbstractFixture.php: on s'en servira pour affecter un prêt à un adhérent
             $this->manager->persist($adherent);
         }
-        $adherent = new Adherent();
-        $adherent->setNom("Kod")
+        $adherentAdmin = new Adherent();
+        $adherentAdmin->setNom("Kod")
             ->setPrenom("Kri")
             ->setMail("admin@gmail.com")
-            ->setPassword($this->passwordEncoder->encodePassword($adherent, $adherent->getNom()));
-        $this->manager->persist($adherent);
+            ->setPassword($this->passwordEncoder->encodePassword($adherent, $adherent->getNom()))
+            ->setRoles([Adherent::ROLE_ADMIN]);
+        $this->manager->persist($adherentAdmin);
+
+        $adherentManager = new Adherent();
+        $adherentManager->setNom("Durand")
+            ->setPrenom("Sophie")
+            ->setMail("manager@gmail.com")
+            ->setPassword($this->passwordEncoder->encodePassword($adherent, $adherent->getNom()))
+            ->setRoles([Adherent::ROLE_MANAGER]);
+        $this->manager->persist($adherentManager);
 
         $this->manager->flush();
     }

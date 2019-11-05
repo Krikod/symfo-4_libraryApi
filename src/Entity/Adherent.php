@@ -67,7 +67,7 @@ class Adherent implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="simple_array", length=255, nullable=true)
+     * @ORM\Column(type="array", length=255, nullable=true)
      */
     private $roles;
 
