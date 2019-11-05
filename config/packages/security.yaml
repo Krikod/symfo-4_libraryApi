@@ -2,7 +2,7 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     encoders:
         App\Entity\Adherent:
-            algorithm: bcrypt
+            algorithm: auto
     providers:
 #        in_memory: { memory: null }
         in_database:
@@ -20,7 +20,7 @@ security:
             anonymous: true
             json_login:
                 username_path: mail
-                check_path: /apiPlatForm/login_check
+                check_path: /apiPlatform/login_check
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
             guard:
