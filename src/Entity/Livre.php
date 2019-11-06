@@ -33,7 +33,14 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *              "method"="GET",
  *              "path"="/manager/livres",
  *              "get"={"security"="is_granted('ROLE_MANAGER')"},
- *              "security_message"="Vous n'avez pas les droits pour accéder à cette ressource."
+ *              "security_message"="Vous n'avez pas les droits pour
+ *                                  accéder à cette ressource."
+ *          },
+ *          "post"={
+ *              "method"="POST",
+ *              "security"="is_granted('ROLE_MANAGER')",
+ *              "security_message"="Vous n'avez pas les droits pour
+ *                                  poster cette ressource."
  *          }
  *     }
  * )
