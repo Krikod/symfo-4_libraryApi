@@ -28,6 +28,12 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *              "normalization_context"={
  *                  "groups"={"get_role_adherent"}
  *              }
+ *          },
+ *          "get_role_manager"={
+ *              "method"="GET",
+ *              "path"="/manager/livres",
+ *              "get"={"security"="is_granted('ROLE_MANAGER')"},
+ *              "security_message"="Vous n'avez pas les droits pour accéder à cette ressource."
  *          }
  *     }
  * )
