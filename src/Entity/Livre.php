@@ -22,14 +22,14 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *          }
  *     },
  *     collectionOperations={
- *          "get_role_adherent"={
+ *          "get_coll_role_adherent"={
  *              "method"="GET",
  *              "path"="/adherent/livres",
  *              "normalization_context"={
  *                  "groups"={"get_role_adherent"}
  *              }
  *          },
- *          "get_role_manager"={
+ *          "get_coll_role_manager"={
  *              "method"="GET",
  *              "path"="/manager/livres",
  *              "get"={"security"="is_granted('ROLE_MANAGER')"},
@@ -41,6 +41,22 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *              "security"="is_granted('ROLE_MANAGER')",
  *              "security_message"="Vous n'avez pas les droits pour
  *                                  poster cette ressource."
+ *          }
+ *     },
+ *     itemOperations={
+ *          "get_item_role_adherent"={
+ *              "method"="GET",
+ *              "path"="/adherent/livres/{id}",
+ *              "normalization_context"={
+ *                  "groups"={"get_role_adherent"}
+ *              }
+ *          },
+ *          "get_item_role_manager"={
+ *              "method"="GET",
+ *              "path"="/manager/livres/{id}",
+ *              "get"={"security"="is_granted('ROLE_MANAGER')"},
+ *              "security_message"="Vous n'avez pas les droits pour
+ *                                  accéder à cette ressource."
  *          }
  *     }
  * )
