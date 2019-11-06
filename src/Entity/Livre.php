@@ -27,7 +27,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *              "path"="/adherent/livres",
  *              "normalization_context"={
  *                  "groups"={"get_role_adherent"}
- *     }
+ *              }
  *          }
  *     }
  * )
@@ -39,12 +39,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *          "genre" : "exact"
  *     }
  * )
-// * @ApiFilter(
-// *     RangeFilter::class,
-// *     properties={
-// *          "prix"
-// *     }
-// * )
  * @ApiFilter(
  *     OrderFilter::class,
  *     properties={

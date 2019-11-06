@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6114a0a7-1e11-4f9c-bc76-7a81df48a198" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Livre.php" afterPath="$PROJECT_DIR$/src/Entity/Livre.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Livre.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Livre.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Livre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2272">
-              <caret line="71" column="16" lean-forward="true" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+            <state relative-caret-position="320">
+              <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
               <folding>
                 <element signature="e#30#72#0#PHP" expanded="true" />
               </folding>
@@ -54,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="security.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="security.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="467">
+              <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,10 +95,10 @@
         <option value="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" />
         <option value="$PROJECT_DIR$/config/routes/jwt.yaml" />
         <option value="$PROJECT_DIR$/config/routes/api_platform.yaml" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
         <option value="$PROJECT_DIR$/src/Entity/Adherent.php" />
         <option value="$PROJECT_DIR$/src/Entity/Livre.php" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
       </list>
     </option>
   </component>
@@ -233,8 +234,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="684" />
-    <option name="y" value="94" />
+    <option name="x" value="692" />
+    <option name="y" value="168" />
     <option name="width" value="1220" />
     <option name="height" value="851" />
   </component>
@@ -266,6 +267,12 @@
               <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Symf-4_libraryApi" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symf-4_libraryApi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
@@ -330,15 +337,15 @@
       <workItem from="1571595860655" duration="5040000" />
       <workItem from="1571661784527" duration="12670000" />
       <workItem from="1572427255124" duration="27737000" />
-      <workItem from="1572629643743" duration="35738000" />
+      <workItem from="1572629643743" duration="37059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90203000" />
+    <option name="totallyTimeSpent" value="91524000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="684" y="94" width="1220" height="851" extended-state="0" />
+    <frame x="692" y="168" width="1220" height="851" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -781,14 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -813,11 +812,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Livre.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2272">
-          <caret line="71" column="16" lean-forward="true" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+        <state relative-caret-position="320">
+          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
           <folding>
             <element signature="e#30#72#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
