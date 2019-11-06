@@ -11,14 +11,23 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\LivreRepository")
  * @ApiResource(
  *     attributes={
  *          "order"={
- *              "titre":"ASC",
- *              "prix":"DESC"
+ *              "titre":"ASC"
+ *          }
+ *     },
+ *     collectionOperations={
+ *          "get_role_adherent"={
+ *              "method"="GET",
+ *              "path"="/adherent/livres",
+ *              "normalization_context"={
+ *                  "groups"={"get_role_adherent"}
+ *     }
  *          }
  *     }
  * )
@@ -26,15 +35,16 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *     SearchFilter::class,
  *     properties={
  *          "titre":"ipartial",
- *          "auteur":"exact"
+ *          "auteur":"exact",
+ *          "genre" : "exact"
  *     }
  * )
- * @ApiFilter(
- *     RangeFilter::class,
- *     properties={
- *          "prix"
- *     }
- * )
+// * @ApiFilter(
+// *     RangeFilter::class,
+// *     properties={
+// *          "prix"
+// *     }
+// * )
  * @ApiFilter(
  *     OrderFilter::class,
  *     properties={
@@ -67,11 +77,13 @@ class Livre
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"get_role_adherent"})
      */
     private $isbn;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"get_role_adherent"})
      */
     private $titre;
 
@@ -83,28 +95,33 @@ class Livre
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Genre", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"get_role_adherent"})
      */
     private $genre;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Editeur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"get_role_adherent"})
      */
     private $editeur;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Auteur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"get_role_adherent"})
      */
     private $auteur;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Groups({"get_role_adherent"})
      */
     private $annee;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"get_role_adherent"})
      */
     private $langue;
 
