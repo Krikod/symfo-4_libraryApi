@@ -57,7 +57,31 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *              "get"={"security"="is_granted('ROLE_MANAGER')"},
  *              "security_message"="Vous n'avez pas les droits pour
  *                                  accéder à cette ressource."
- *          }
+ *          },
+ *          "put_item_role_manager"={
+ *              "method"="PUT",
+ *              "path"="/manager/livres/{id}",
+ *              "put"={"security"="is_granted('ROLE_MANAGER')"},
+ *              "security_message"="Vous n'avez pas les droits pour
+ *                                  accéder à cette ressource.",
+ *              "denormalization_context"={
+ *                  "groups"={"put_manager"}
+ *              }
+ *          },
+ *          "put_item_role_admin"={
+ *              "method"="PUT",
+ *              "path"="/admin/livres/{id}",
+ *              "put"={"security"="is_granted('ROLE_ADMIN')"},
+ *              "security_message"="Vous n'avez pas les droits pour
+ *                                  accéder à cette ressource."
+ *          },
+ *          "delete_item_role_admin"={
+ *              "method"="DELETE",
+ *              "path"="/admin/livres/{id}",
+ *              "put"={"security"="is_granted('ROLE_ADMIN')"},
+ *              "security_message"="Vous n'avez pas les droits pour
+ *                                  accéder à cette ressource."
+ *          },
  *     }
  * )
  * @ApiFilter(
@@ -100,13 +124,13 @@ class Livre
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $isbn;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $titre;
 
@@ -118,33 +142,33 @@ class Livre
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Genre", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $genre;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Editeur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $editeur;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Auteur", inversedBy="livres")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $auteur;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $annee;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"get_role_adherent"})
+     * @Groups({"get_role_adherent", "put_manager"})
      */
     private $langue;
 
