@@ -206,6 +206,11 @@ class Adherent implements UserInterface
     public function getRoles(): array
     {
         return $this->roles;
+//        Doc Sf:
+//        $roles = $this->roles;
+//        $roles = ['ROLE_ADHERENT'];
+//
+//        return array_unique($roles);
     }
 /**
  * Affecte les rôles de l'utilisateur

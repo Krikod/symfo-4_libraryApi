@@ -17,24 +17,15 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ORM\Entity(repositoryClass="App\Repository\LivreRepository")
  * @ApiResource(
  *     attributes={
- *          "order"={
- *              "titre":"ASC"
- *          }
+ *          "order"={"titre":"ASC"}
  *     },
  *     collectionOperations={
- *          "get_coll_role_adherent"={
+ *          "get"={
  *              "method"="GET",
- *              "path"="/adherent/livres",
+ *              "path"="/livres",
  *              "normalization_context"={
  *                  "groups"={"get_role_adherent"}
  *              }
- *          },
- *          "get_coll_role_manager"={
- *              "method"="GET",
- *              "path"="/manager/livres",
- *              "get"={"security"="is_granted('ROLE_MANAGER')"},
- *              "security_message"="Vous n'avez pas les droits pour
- *                                  accéder à cette ressource."
  *          },
  *          "post"={
  *              "method"="POST",
@@ -44,23 +35,16 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *          }
  *     },
  *     itemOperations={
- *          "get_item_role_adherent"={
+ *          "get"={
  *              "method"="GET",
- *              "path"="/adherent/livres/{id}",
+ *              "path"="/livres/{id}",
  *              "normalization_context"={
  *                  "groups"={"get_role_adherent"}
  *              }
  *          },
- *          "get_item_role_manager"={
- *              "method"="GET",
- *              "path"="/manager/livres/{id}",
- *              "get"={"security"="is_granted('ROLE_MANAGER')"},
- *              "security_message"="Vous n'avez pas les droits pour
- *                                  accéder à cette ressource."
- *          },
- *          "put_item_role_manager"={
+ *          "put"={
  *              "method"="PUT",
- *              "path"="/manager/livres/{id}",
+ *              "path"="/livres/{id}",
  *              "put"={"security"="is_granted('ROLE_MANAGER')"},
  *              "security_message"="Vous n'avez pas les droits pour
  *                                  accéder à cette ressource.",
@@ -68,16 +52,9 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *                  "groups"={"put_manager"}
  *              }
  *          },
- *          "put_item_role_admin"={
- *              "method"="PUT",
- *              "path"="/admin/livres/{id}",
- *              "put"={"security"="is_granted('ROLE_ADMIN')"},
- *              "security_message"="Vous n'avez pas les droits pour
- *                                  accéder à cette ressource."
- *          },
  *          "delete_item_role_admin"={
  *              "method"="DELETE",
- *              "path"="/admin/livres/{id}",
+ *              "path"="/livres/{id}",
  *              "put"={"security"="is_granted('ROLE_ADMIN')"},
  *              "security_message"="Vous n'avez pas les droits pour
  *                                  accéder à cette ressource."
@@ -136,6 +113,7 @@ class Livre
 
     /**
      * @ORM\Column(type="float", nullable=true)
+     * @Groups({"get_role_manager", "put_admin"})
      */
     private $prix;
 
@@ -174,6 +152,7 @@ class Livre
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Pret", mappedBy="livre")
+     * @Groups({"get_role_manager"})
      */
     private $prets;
 
