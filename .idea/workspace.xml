@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6114a0a7-1e11-4f9c-bc76-7a81df48a198" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/framework.yaml" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" afterPath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Adherent.php" afterPath="$PROJECT_DIR$/src/Entity/Adherent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Livre.php" afterPath="$PROJECT_DIR$/src/Entity/Livre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Serializer/LivreContextBuilder.php" afterPath="$PROJECT_DIR$/src/Serializer/LivreContextBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Pret.php" afterPath="$PROJECT_DIR$/src/Entity/Pret.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +32,18 @@
       <file leaf-file-name="Pret.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Pret.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-320">
-              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="288">
+              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppFixtures.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="99" column="16" lean-forward="false" selection-start-line="97" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -105,7 +108,6 @@
         <option value="$PROJECT_DIR$/src/Entity/Auteur.php" />
         <option value="$PROJECT_DIR$/src/Entity/Nationalite.php" />
         <option value="$PROJECT_DIR$/src/Entity/Genre.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Pret.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/routes/jwt.yaml" />
         <option value="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
@@ -119,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/Entity/Adherent.php" />
         <option value="$PROJECT_DIR$/src/Serializer/LivreContextBuilder.php" />
         <option value="$PROJECT_DIR$/src/Entity/Livre.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Pret.php" />
       </list>
     </option>
   </component>
@@ -285,17 +288,18 @@
             <path>
               <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Symf-4_libraryApi" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Symf-4_libraryApi" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Symf-4_libraryApi" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symf-4_libraryApi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DataFixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Symf-4_libraryApi" type="b2602c69:ProjectViewProjectNode" />
@@ -359,12 +363,12 @@
       <workItem from="1573201936877" duration="20730000" />
       <workItem from="1573256533207" duration="4362000" />
       <workItem from="1573395774230" duration="608000" />
-      <workItem from="1573548556348" duration="29372000" />
+      <workItem from="1573548556348" duration="30012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154579000" />
+    <option name="totallyTimeSpent" value="155219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="39" width="1863" height="1041" extended-state="6" />
@@ -634,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2272">
-          <caret line="77" column="67" lean-forward="false" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ApiAuteurController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2368">
@@ -804,10 +801,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="99" column="16" lean-forward="false" selection-start-line="97" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Pret.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="288">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
           <folding />
         </state>
       </provider>

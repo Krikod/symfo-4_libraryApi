@@ -45,6 +45,15 @@ class Pret
      */
     private $adherent;
 
+    public function __construct()
+    {
+        $this->datePret = new \DateTime();
+        $dateRetourPrevue = date('Y-m-d H:m:n', strtotime('15 days', $this->getDatePret()->getTimestamp()));
+        $dateRetourPrevue = \DateTime::createFromFormat('Y-m-d H:m:n',$dateRetourPrevue);
+        $this->dateRetourPrevue = $dateRetourPrevue;
+        $this->dateRetourReelle = null;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
