@@ -1,4 +1,5 @@
 <?php
+// src/Serializer/LivreContextBuilder.php
 
 namespace App\Serializer;
 
@@ -24,19 +25,21 @@ final class LivreContextBuilder implements SerializerContextBuilderInterface
         $context = $this->decorated->createFromRequest($request, $normalization, $extractedAttributes);
         $resourceClass = $context['resource_class'] ?? null;
 
+        $isManager = $this->authorizationChecker->isGranted('ROLE_MANAGER');
         if ($resourceClass === Livre::class && isset($context['groups'])
-            && $this->authorizationChecker->isGranted('ROLE_MANAGER')
-            && $normalization === true) {
+            && $isManager && true === $normalization) {
             $context['groups'][] = 'get_role_manager';
         }
         if ($resourceClass === Livre::class && isset($context['groups'])
             && $this->authorizationChecker->isGranted('ROLE_ADMIN')
-            && $normalization === false) {
+            && false === $normalization) { // PUT/POST: dénormalisation (array => object)
                 if ($request->getMethod() == 'put') {
                     $context['groups'][] = 'put_admin';
                 }
         }
 //dump($context);die();
+//        dump($request->getMethod());die();
+//        dump($this->authorizationChecker->isGranted('ROLE_ADHERENT'));die();
         return $context;
     }
 }

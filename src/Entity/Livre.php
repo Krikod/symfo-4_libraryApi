@@ -24,7 +24,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *              "method"="GET",
  *              "path"="/livres",
  *              "normalization_context"={
- *                  "groups"={"get_role_adherent"}
+ *                  "groups"={"get_role_adherent" }
  *              }
  *          },
  *          "post"={
@@ -45,20 +45,20 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *          "put"={
  *              "method"="PUT",
  *              "path"="/livres/{id}",
- *              "put"={"security"="is_granted('ROLE_MANAGER')"},
+ *              "security"="is_granted('ROLE_MANAGER')",
  *              "security_message"="Vous n'avez pas les droits pour
  *                                  accéder à cette ressource.",
  *              "denormalization_context"={
  *                  "groups"={"put_manager"}
  *              }
  *          },
- *          "delete_item_role_admin"={
+ *          "delete"={
  *              "method"="DELETE",
  *              "path"="/livres/{id}",
- *              "put"={"security"="is_granted('ROLE_ADMIN')"},
+ *              "security"="is_granted('ROLE_ADMIN')",
  *              "security_message"="Vous n'avez pas les droits pour
  *                                  accéder à cette ressource."
- *          },
+ *          }
  *     }
  * )
  * @ApiFilter(

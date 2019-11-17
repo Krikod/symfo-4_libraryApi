@@ -28,4 +28,4 @@ services:
     'App\Serializer\LivreContextBuilder':
         decorates: 'api_platform.serializer.context_builder'
         arguments: [ '@App\Serializer\LivreContextBuilder.inner' ]
-        autoconfigure: false
+        autoconfigure: true

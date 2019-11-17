@@ -11,9 +11,9 @@ framework:
         cookie_samesite: lax
 
     #esi: true
-    #fragments: true
+    #fragmentJWT_PASSPHRASEs: true
     php_errors:
         log: true
 
-#    serializer: { enable_annotations: true }
+    serializer: { enable_annotations: true }
 
